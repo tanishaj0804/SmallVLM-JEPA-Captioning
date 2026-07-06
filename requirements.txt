@@ -1,0 +1,9 @@
+torch
+transformers>=4.53.0
+accelerate
+decord
+torchcodec
+numpy
+num2words
+sentencepiece
+safetensors
