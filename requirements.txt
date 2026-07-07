@@ -1,9 +1,10 @@
 torch
-transformers>=4.53.0
+transformers>=4.37.0
 accelerate
-decord
-torchcodec
-numpy
-num2words
-sentencepiece
+bitsandbytes
 safetensors
+sentencepiece
+huggingface-hub
+opencv-python
+Pillow
+numpy
