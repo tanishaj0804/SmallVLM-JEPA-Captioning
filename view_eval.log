@@ -1,0 +1,1882 @@
+
+============================================================
+BASELINE CASE : N1
+VIDEO         : videos/N1/N1_MULTIVIEW.mp4
+OUTPUT        : results/baseline/N1
+============================================================
+
+[1/6] OBJECT TRACKING
+
+[tracking] Loading yolo11n.pt...
+[tracking] Video: 1280x360, 30.00 FPS, 201 frames
+[tracking] Minimum raw track frames: 10
+[tracking] Maximum stitch gap: 1.50s (45 frames)
+[tracking] Processed 25/201 frames
+[tracking] Processed 50/201 frames
+[tracking] Processed 75/201 frames
+[tracking] Processed 100/201 frames
+[tracking] Processed 125/201 frames
+[tracking] Processed 150/201 frames
+[tracking] Processed 175/201 frames
+[tracking] Processed 200/201 frames
+[tracking] Consolidating raw tracks...
+[tracking] Stitching fragmented tracks...
+[tracking] Building stitch candidates...
+  stitched Track 9 -> Track 110 (score=0.869, gap=0.5s)
+  stitched Track 10 -> Track 126 (score=0.862, gap=0.067s)
+  stitched Track 124 -> Track 256 (score=0.854, gap=0.7s)
+  stitched Track 4 -> Track 47 (score=0.686, gap=0.1s)
+  stitched Track 194 -> Track 298 (score=0.674, gap=0.967s)
+  stitched Track 3 -> Track 271 (score=0.656, gap=0.933s)
+[tracking] Valid raw tracks: 28
+[tracking] Stitch chains: 22
+[tracking] Stitched entities: 22
+[tracking] Accepted stitches: 6
+[tracking] Validating physical entities...
+[tracking] Accepted entities: 22
+[tracking] Rejected weak entities: 0
+
+========================================================================
+TRACKING COMPLETE
+========================================================================
+
+Physical object counts:
+  cars            20
+  buses           1
+  motorcycles     0
+  bicycles        0
+  trucks          1
+  people          0
+
+Tracking summary:
+  Raw tracker IDs: 44
+  Valid raw tracks: 28
+  Raw tracks rejected: 16
+  Stitched candidates: 22
+  Accepted stitches: 6
+  Physical entities: 22
+  Weak entities rejected: 0
+  Giant boxes rejected: 0
+  Dashcam detections rejected: 0
+
+JSON written to: results/baseline/N1/N1_tracking.json
+Annotated video written to: results/baseline/N1/N1_tracked.mp4
+========================================================================
+
+[2/6] VISUAL IDENTITY
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[identity] Loading CLIP...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 59066.34it/s]
+[identity] CLIP device: cuda
+
+[identity] Analyzing Car_1...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_2...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Bus_1...
+  Color   : green (track confidence=1.000)
+  Subtype : bus (track confidence=1.000)
+
+[identity] Analyzing Car_3...
+  Color   : gray (track confidence=0.692)
+  Subtype : hatchback (track confidence=0.517)
+
+[identity] Analyzing Car_4...
+  Color   : white (track confidence=0.906)
+  Subtype : van (track confidence=0.967)
+
+[identity] Analyzing Car_5...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_6...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_7...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_8...
+  Color   : white (track confidence=0.779)
+  Subtype : hatchback (track confidence=0.671)
+
+[identity] Analyzing Car_9...
+  Color   : gray (track confidence=0.816)
+  Subtype : hatchback (track confidence=0.672)
+
+[identity] Analyzing Truck_1...
+  Color   : green (track confidence=0.891)
+  Subtype : cargo truck (track confidence=1.000)
+
+[identity] Analyzing Car_10...
+  Color   : white (track confidence=0.936)
+  Subtype : van (track confidence=0.955)
+
+[identity] Analyzing Car_11...
+  Color   : white (track confidence=0.637)
+  Subtype : hatchback (track confidence=0.788)
+
+[identity] Analyzing Car_12...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_13...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_14...
+  Color   : unknown (track confidence=0.413)
+  Subtype : hatchback (track confidence=0.861)
+
+[identity] Analyzing Car_15...
+  Color   : gray (track confidence=0.693)
+  Subtype : hatchback (track confidence=1.000)
+
+[identity] Analyzing Car_16...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_17...
+  Color   : black (track confidence=0.665)
+  Subtype : hatchback (track confidence=0.758)
+
+[identity] Analyzing Car_18...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_19...
+  Color   : black (track confidence=1.000)
+  Subtype : van (track confidence=0.508)
+
+[identity] Analyzing Car_20...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+========================================================================
+VISUAL IDENTITIES
+========================================================================
+Car_1                -> Car_1
+Car_2                -> Car_2
+Bus_1                -> Green_Bus
+Car_3                -> Gray_Hatchback_1
+Car_4                -> White_Van_1
+Car_5                -> Car_3
+Car_6                -> Car_4
+Car_7                -> Car_5
+Car_8                -> White_Hatchback_1
+Car_9                -> Gray_Hatchback_2
+Truck_1              -> Green_Cargo_Truck
+Car_10               -> White_Van_2
+Car_11               -> White_Hatchback_2
+Car_12               -> Car_6
+Car_13               -> Car_7
+Car_14               -> Hatchback
+Car_15               -> Gray_Hatchback_3
+Car_16               -> Car_8
+Car_17               -> Black_Hatchback
+Car_18               -> Car_9
+Car_19               -> Black_Van
+Car_20               -> Car_10
+
+Identity JSON written to: results/baseline/N1/N1_identity.json
+
+[3/6] OBJECT ANALYSIS
+
+[analyzer] Loading tracking data...
+[analyzer] Preparing 22 physical entities...
+[analyzer] Building causal temporal states...
+
+========================================================================
+TEMPORAL OBJECT ANALYSIS COMPLETE
+========================================================================
+
+Car_1 (Car_1)
+  Class       : car
+  States      : 66
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.813
+  Stability   : 0.964
+  Max speed   : 0.028262
+  Max accel   : 0.031355
+
+Car_2 (Car_2)
+  Class       : car
+  States      : 66
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.820
+  Stability   : 0.944
+  Max speed   : 0.131559
+  Max accel   : 0.275910
+
+Bus_1 (Bus_1)
+  Class       : bus
+  States      : 54
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.657
+  Stability   : 0.450
+  Max speed   : 0.093502
+  Max accel   : 0.502171
+
+Car_3 (Car_3)
+  Class       : car
+  States      : 18
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.523
+  Stability   : 0.287
+  Max speed   : 0.551800
+  Max accel   : 6.900621
+
+Car_4 (Car_4)
+  Class       : car
+  States      : 7
+  Motion      : receding_right
+  Depth       : receding
+  Confidence  : 0.659
+  Stability   : 0.450
+  Max speed   : 0.128871
+  Max accel   : 0.758563
+
+Car_5 (Car_5)
+  Class       : car
+  States      : 20
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.770
+  Stability   : 0.775
+  Max speed   : 0.059522
+  Max accel   : 0.300951
+
+Car_6 (Car_6)
+  Class       : car
+  States      : 59
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.782
+  Stability   : 0.905
+  Max speed   : 0.059244
+  Max accel   : 0.107576
+
+Car_7 (Car_7)
+  Class       : car
+  States      : 50
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.817
+  Stability   : 0.680
+  Max speed   : 0.172197
+  Max accel   : 1.095445
+
+Car_8 (Car_8)
+  Class       : car
+  States      : 62
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.862
+  Stability   : 0.724
+  Max speed   : 0.067815
+  Max accel   : 0.351635
+
+Car_9 (Car_9)
+  Class       : car
+  States      : 36
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.788
+  Stability   : 0.870
+  Max speed   : 0.094594
+  Max accel   : 0.327029
+
+Truck_1 (Truck_1)
+  Class       : truck
+  States      : 29
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.699
+  Stability   : 0.455
+  Max speed   : 0.190843
+  Max accel   : 0.648503
+
+Car_10 (Car_10)
+  Class       : car
+  States      : 62
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.844
+  Stability   : 0.664
+  Max speed   : 0.233144
+  Max accel   : 0.189069
+
+Car_11 (Car_11)
+  Class       : car
+  States      : 35
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.679
+  Stability   : 0.632
+  Max speed   : 0.071260
+  Max accel   : 0.188360
+
+Car_12 (Car_12)
+  Class       : car
+  States      : 49
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.840
+  Stability   : 0.895
+  Max speed   : 0.057165
+  Max accel   : 0.149612
+
+Car_13 (Car_13)
+  Class       : car
+  States      : 13
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.782
+  Stability   : 0.862
+  Max speed   : 0.067113
+  Max accel   : 0.071890
+
+Car_14 (Car_14)
+  Class       : car
+  States      : 31
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.770
+  Stability   : 0.703
+  Max speed   : 0.137600
+  Max accel   : 0.737539
+
+Car_15 (Car_15)
+  Class       : car
+  States      : 16
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.672
+  Stability   : 0.461
+  Max speed   : 0.310013
+  Max accel   : 3.111324
+
+Car_16 (Car_16)
+  Class       : car
+  States      : 23
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.759
+  Stability   : 0.814
+  Max speed   : 0.035563
+  Max accel   : 0.138574
+
+Car_17 (Car_17)
+  Class       : car
+  States      : 20
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.617
+  Stability   : 0.397
+  Max speed   : 0.170898
+  Max accel   : 1.970748
+
+Car_18 (Car_18)
+  Class       : car
+  States      : 19
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.872
+  Stability   : 0.910
+  Max speed   : 0.018056
+  Max accel   : 0.154280
+
+Car_19 (Car_19)
+  Class       : car
+  States      : 12
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.722
+  Stability   : 0.811
+  Max speed   : 0.058744
+  Max accel   : 0.122671
+
+Car_20 (Car_20)
+  Class       : car
+  States      : 10
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.738
+  Stability   : 0.460
+  Max speed   : 0.154554
+  Max accel   : 1.082097
+
+------------------------------------------------------------------------
+Entities analyzed       : 22
+Temporal states created : 757
+Accident classification : DISABLED
+BBox overlap = collision : FALSE
+========================================================================
+
+JSON written to: results/baseline/N1/N1_object_analysis.json
+
+[4/6] INTERACTION ANALYSIS
+
+
+========================================================================================
+INTERACTION ANALYZER V5 COMPLETE
+========================================================================================
+
+Interaction episodes      : 90
+Pairs with episodes       : 75
+Critical event candidates : 4
+
+Critical event candidates:
+
+CriticalEvent_1  Car_3 <-> Car_9
+  Classes       : car <-> car
+  Event window  : 0.80 - 1.50 s
+  Trigger time  : 1.10 s
+  Trigger type  : closing_motion
+  Trigger score : 0.4497
+  Response      : 0.7364
+  Asymmetry     : 0.7158
+  Chain score   : 0.6924
+
+CriticalEvent_2  Car_3 <-> Car_6
+  Classes       : car <-> car
+  Event window  : 0.50 - 1.10 s
+  Trigger time  : 0.80 s
+  Trigger type  : closing_motion
+  Trigger score : 0.4045
+  Response      : 0.6591
+  Asymmetry     : 0.6096
+  Chain score   : 0.6344
+
+CriticalEvent_3  Car_3 <-> Car_11
+  Classes       : car <-> car
+  Event window  : 0.50 - 1.10 s
+  Trigger time  : 0.70 s
+  Trigger type  : closing_motion
+  Trigger score : 0.3845
+  Response      : 0.6333
+  Asymmetry     : 0.4890
+  Chain score   : 0.6013
+
+CriticalEvent_4  Bus_1 <-> Car_6
+  Classes       : bus <-> car
+  Event window  : 0.10 - 4.10 s
+  Trigger time  : 2.60 s
+  Trigger type  : closing_motion
+  Trigger score : 0.4117
+  Response      : 0.6540
+  Asymmetry     : 0.6316
+  Chain score   : 0.5386
+
+========================================================================================
+
+Saved V5 interaction analysis to: results/baseline/N1/N1_interaction_analysis.json
+
+[5/6] TEMPORAL ANALYSIS
+
+[temporal] Loading object analysis: results/baseline/N1/N1_object_analysis.json
+[temporal] Entities discovered: 22
+[temporal] Entity states: 757
+[temporal] Temporal windows: 14
+
+====================================================================================================
+TEMPORAL ABNORMALITY ANALYZER BASELINE COMPLETE
+====================================================================================================
+
+Temporal windows analyzed : 14
+Top candidate windows     : 5
+
+----------------------------------------------------------------------------------------------------
+RANK 01 | 4.10s -> 6.10s | SCORE 0.9576
+  motion change        : 1.0000
+  proximity change     : 0.8654
+  track disruption     : 0.8630
+  geometry change      : 1.0000
+  local motion chaos   : 1.0000
+  motion event density : 0.6544
+  evidence:
+    motion      -> ['Car_15', 'Car_17', 'Bus_1']
+    proximity   -> ['Car_10|Car_16', 'Car_15|Car_16', 'Car_15|Car_18']
+    disruption  -> ['Car_11', 'Bus_1', 'Car_12']
+    geometry    -> ['Car_17', 'Bus_1', 'Car_14']
+    chaos       -> ['Car_15', 'Car_17', 'Car_20', 'Car_14', 'Bus_1']
+    events      -> ['Car_8', 'Car_14', 'Car_17']
+----------------------------------------------------------------------------------------------------
+RANK 02 | 3.60s -> 5.60s | SCORE 0.8622
+  motion change        : 0.9924
+  proximity change     : 0.5701
+  track disruption     : 0.8951
+  geometry change      : 0.4383
+  local motion chaos   : 0.8884
+  motion event density : 0.8209
+  evidence:
+    motion      -> ['Car_15', 'Car_17', 'Bus_1']
+    proximity   -> ['Car_15|Car_16', 'Car_15|Car_18', 'Car_10|Car_16']
+    disruption  -> ['Car_13', 'Car_11', 'Bus_1']
+    geometry    -> ['Car_14', 'Bus_1', 'Car_15']
+    chaos       -> ['Car_15', 'Car_17', 'Car_14', 'Bus_1', 'Car_10']
+    events      -> ['Car_8', 'Car_14', 'Car_2']
+----------------------------------------------------------------------------------------------------
+RANK 03 | 3.10s -> 5.10s | SCORE 0.8343
+  motion change        : 0.7758
+  proximity change     : 0.2512
+  track disruption     : 0.8630
+  geometry change      : 0.0000
+  local motion chaos   : 0.8531
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_15', 'Car_17', 'Car_18']
+    proximity   -> ['Car_15|Car_16', 'Car_15|Car_18', 'Bus_1|Car_9']
+    disruption  -> ['Car_9', 'Car_13', 'Car_11']
+    geometry    -> ['Car_14', 'Car_10', 'Car_12']
+    chaos       -> ['Car_15', 'Car_17', 'Car_10', 'Car_9', 'Car_7']
+    events      -> ['Car_8', 'Car_14', 'Car_11']
+----------------------------------------------------------------------------------------------------
+RANK 04 | 2.60s -> 4.60s | SCORE 0.7906
+  motion change        : 0.4984
+  proximity change     : 0.0102
+  track disruption     : 0.7773
+  geometry change      : 0.0022
+  local motion chaos   : 0.6654
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_15', 'Car_8', 'Bus_1']
+    proximity   -> ['Bus_1|Car_9', 'Bus_1|Car_13', 'Car_15|Car_16']
+    disruption  -> ['Truck_1', 'Car_9', 'Car_11']
+    geometry    -> ['Car_9', 'Car_10', 'Car_12']
+    chaos       -> ['Car_15', 'Car_8', 'Car_10', 'Car_9', 'Truck_1']
+    events      -> ['Car_8', 'Car_14', 'Car_11']
+----------------------------------------------------------------------------------------------------
+RANK 05 | 4.60s -> 6.60s | SCORE 0.6778
+  motion change        : 0.5360
+  proximity change     : 1.0000
+  track disruption     : 0.6274
+  geometry change      : 0.9375
+  local motion chaos   : 0.6696
+  motion event density : 0.4797
+  evidence:
+    motion      -> ['Car_17', 'Car_20', 'Car_14']
+    proximity   -> ['Car_10|Car_16', 'Car_10|Car_19', 'Car_15|Car_18']
+    disruption  -> ['Car_12', 'Car_15', 'Car_7']
+    geometry    -> ['Car_17', 'Car_15', 'Bus_1']
+    chaos       -> ['Car_17', 'Car_20', 'Car_15', 'Car_14', 'Car_10']
+    events      -> ['Car_14', 'Car_17', 'Car_2']
+----------------------------------------------------------------------------------------------------
+
+[temporal] Saved analysis to: results/baseline/N1/N1_temporal_analysis.json
+
+[6/6] EVENT VERIFICATION
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[verify] Loading temporal analysis...
+[verify] Selected 3 temporally diverse candidates.
+[verify] Loading HuggingFaceTB/SmolVLM2-256M-Video-Instruct on cuda...
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 5607.53it/s]
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+
+[verify] Candidate 1
+  detected window : 4.10 - 6.10 s
+  visual window   : 3.60 - 6.60 s
+  input tokens     : 3857
+  visual frames    : 6
+  frame sizes      : [(384, 108), (384, 108), (384, 108), (384, 108), (384, 108), (384, 108)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 2
+  detected window : 3.10 - 5.10 s
+  visual window   : 2.60 - 5.60 s
+  input tokens     : 3857
+  visual frames    : 6
+  frame sizes      : [(384, 108), (384, 108), (384, 108), (384, 108), (384, 108), (384, 108)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 3
+  detected window : 1.10 - 3.10 s
+  visual window   : 0.60 - 3.60 s
+  input tokens     : 3857
+  visual frames    : 6
+  frame sizes      : [(384, 108), (384, 108), (384, 108), (384, 108), (384, 108), (384, 108)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+========================================================================================
+EVENT VERIFIER COMPLETE
+========================================================================================
+Candidates verified : 3
+Critical event       : False
+Event type           : none
+Confidence           : 0.0000
+Saved to             : results/baseline/N1/N1_event_verification.json
+
+============================================================
+COMPLETED : N1
+============================================================
+
+============================================================
+BASELINE CASE : N2
+VIDEO         : videos/N2/N2_MULTIVIEW.mp4
+OUTPUT        : results/baseline/N2
+============================================================
+
+[1/6] OBJECT TRACKING
+
+[tracking] Loading yolo11n.pt...
+[tracking] Video: 1280x360, 30.00 FPS, 201 frames
+[tracking] Minimum raw track frames: 10
+[tracking] Maximum stitch gap: 1.50s (45 frames)
+[tracking] Processed 25/201 frames
+[tracking] Processed 50/201 frames
+[tracking] Processed 75/201 frames
+[tracking] Processed 100/201 frames
+[tracking] Processed 125/201 frames
+[tracking] Processed 150/201 frames
+[tracking] Processed 175/201 frames
+[tracking] Processed 200/201 frames
+[tracking] Consolidating raw tracks...
+[tracking] Stitching fragmented tracks...
+[tracking] Building stitch candidates...
+  stitched Track 108 -> Track 154 (score=0.904, gap=0.233s)
+  stitched Track 156 -> Track 201 (score=0.882, gap=0.067s)
+  stitched Track 99 -> Track 232 (score=0.869, gap=0.333s)
+  stitched Track 38 -> Track 185 (score=0.844, gap=0.333s)
+  stitched Track 226 -> Track 246 (score=0.695, gap=0.4s)
+  stitched Track 19 -> Track 132 (score=0.644, gap=1.0s)
+  stitched Track 39 -> Track 178 (score=0.621, gap=0.833s)
+[tracking] Valid raw tracks: 28
+[tracking] Stitch chains: 21
+[tracking] Stitched entities: 21
+[tracking] Accepted stitches: 7
+[tracking] Validating physical entities...
+[tracking] Accepted entities: 19
+[tracking] Rejected weak entities: 2
+
+========================================================================
+TRACKING COMPLETE
+========================================================================
+
+Physical object counts:
+  cars            19
+  buses           0
+  motorcycles     0
+  bicycles        0
+  trucks          0
+  people          0
+
+Tracking summary:
+  Raw tracker IDs: 52
+  Valid raw tracks: 28
+  Raw tracks rejected: 24
+  Stitched candidates: 21
+  Accepted stitches: 7
+  Physical entities: 19
+  Weak entities rejected: 2
+  Giant boxes rejected: 0
+  Dashcam detections rejected: 0
+
+JSON written to: results/baseline/N2/N2_tracking.json
+Annotated video written to: results/baseline/N2/N2_tracked.mp4
+========================================================================
+
+[2/6] VISUAL IDENTITY
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[identity] Loading CLIP...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 31334.85it/s]
+[identity] CLIP device: cuda
+
+[identity] Analyzing Car_1...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_2...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_3...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_4...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_5...
+  Color   : gray (track confidence=0.825)
+  Subtype : hatchback (track confidence=1.000)
+
+[identity] Analyzing Car_6...
+  Color   : gray (track confidence=1.000)
+  Subtype : van (track confidence=0.935)
+
+[identity] Analyzing Car_7...
+  Color   : gray (track confidence=0.671)
+  Subtype : hatchback (track confidence=1.000)
+
+[identity] Analyzing Car_8...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_9...
+  Color   : black (track confidence=1.000)
+  Subtype : SUV (track confidence=0.572)
+
+[identity] Analyzing Car_10...
+  Color   : silver (track confidence=0.636)
+  Subtype : hatchback (track confidence=1.000)
+
+[identity] Analyzing Car_11...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_12...
+  Color   : gray (track confidence=0.600)
+  Subtype : hatchback (track confidence=0.874)
+
+[identity] Analyzing Car_13...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_14...
+  Color   : silver (track confidence=0.804)
+  Subtype : hatchback (track confidence=0.942)
+
+[identity] Analyzing Car_15...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_16...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_17...
+  Color   : gray (track confidence=0.919)
+  Subtype : van (track confidence=0.769)
+
+[identity] Analyzing Car_18...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_19...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+========================================================================
+VISUAL IDENTITIES
+========================================================================
+Car_1                -> Car_1
+Car_2                -> Car_2
+Car_3                -> Car_3
+Car_4                -> Car_4
+Car_5                -> Gray_Hatchback_1
+Car_6                -> Gray_Van_1
+Car_7                -> Gray_Hatchback_2
+Car_8                -> Car_5
+Car_9                -> Black_Suv
+Car_10               -> Silver_Hatchback_1
+Car_11               -> Car_6
+Car_12               -> Gray_Hatchback_3
+Car_13               -> Car_7
+Car_14               -> Silver_Hatchback_2
+Car_15               -> Car_8
+Car_16               -> Car_9
+Car_17               -> Gray_Van_2
+Car_18               -> Car_10
+Car_19               -> Car_11
+
+Identity JSON written to: results/baseline/N2/N2_identity.json
+
+[3/6] OBJECT ANALYSIS
+
+[analyzer] Loading tracking data...
+[analyzer] Preparing 19 physical entities...
+[analyzer] Building causal temporal states...
+
+========================================================================
+TEMPORAL OBJECT ANALYSIS COMPLETE
+========================================================================
+
+Car_1 (Car_1)
+  Class       : car
+  States      : 66
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.951
+  Stability   : 0.958
+  Max speed   : 0.005523
+  Max accel   : 0.066447
+
+Car_2 (Car_2)
+  Class       : car
+  States      : 66
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.943
+  Stability   : 0.940
+  Max speed   : 0.006770
+  Max accel   : 0.088152
+
+Car_3 (Car_3)
+  Class       : car
+  States      : 66
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.909
+  Stability   : 0.869
+  Max speed   : 0.025309
+  Max accel   : 0.419559
+
+Car_4 (Car_4)
+  Class       : car
+  States      : 64
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.943
+  Stability   : 0.944
+  Max speed   : 0.024626
+  Max accel   : 0.148076
+
+Car_5 (Car_5)
+  Class       : car
+  States      : 14
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.551
+  Stability   : 0.434
+  Max speed   : 0.047616
+  Max accel   : 0.624801
+
+Car_6 (Car_6)
+  Class       : car
+  States      : 25
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.644
+  Stability   : 0.424
+  Max speed   : 0.223493
+  Max accel   : 1.074838
+
+Car_7 (Car_7)
+  Class       : car
+  States      : 62
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.845
+  Stability   : 0.762
+  Max speed   : 0.128174
+  Max accel   : 0.597387
+
+Car_8 (Car_8)
+  Class       : car
+  States      : 22
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.825
+  Stability   : 0.591
+  Max speed   : 0.199889
+  Max accel   : 0.678558
+
+Car_9 (Car_9)
+  Class       : car
+  States      : 56
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.812
+  Stability   : 0.650
+  Max speed   : 0.219311
+  Max accel   : 1.568833
+
+Car_10 (Car_10)
+  Class       : car
+  States      : 46
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.870
+  Stability   : 0.757
+  Max speed   : 0.185576
+  Max accel   : 1.537756
+
+Car_11 (Car_11)
+  Class       : car
+  States      : 13
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.776
+  Stability   : 0.484
+  Max speed   : 0.134570
+  Max accel   : 1.298657
+
+Car_12 (Car_12)
+  Class       : car
+  States      : 31
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.746
+  Stability   : 0.407
+  Max speed   : 0.235806
+  Max accel   : 0.295154
+
+Car_13 (Car_13)
+  Class       : car
+  States      : 35
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.802
+  Stability   : 0.515
+  Max speed   : 0.201048
+  Max accel   : 0.181751
+
+Car_14 (Car_14)
+  Class       : car
+  States      : 47
+  Motion      : approaching_right
+  Depth       : approaching
+  Confidence  : 0.864
+  Stability   : 0.636
+  Max speed   : 0.213320
+  Max accel   : 1.020104
+
+Car_15 (Car_15)
+  Class       : car
+  States      : 37
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.804
+  Stability   : 0.606
+  Max speed   : 0.157672
+  Max accel   : 1.150506
+
+Car_16 (Car_16)
+  Class       : car
+  States      : 35
+  Motion      : approaching
+  Depth       : receding
+  Confidence  : 0.851
+  Stability   : 0.794
+  Max speed   : 0.044231
+  Max accel   : 0.325032
+
+Car_17 (Car_17)
+  Class       : car
+  States      : 26
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.763
+  Stability   : 0.552
+  Max speed   : 0.076444
+  Max accel   : 0.646000
+
+Car_18 (Car_18)
+  Class       : car
+  States      : 18
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.562
+  Stability   : 0.311
+  Max speed   : 0.221120
+  Max accel   : 2.271204
+
+Car_19 (Car_19)
+  Class       : car
+  States      : 13
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.770
+  Stability   : 0.701
+  Max speed   : 0.078742
+  Max accel   : 0.697870
+
+------------------------------------------------------------------------
+Entities analyzed       : 19
+Temporal states created : 742
+Accident classification : DISABLED
+BBox overlap = collision : FALSE
+========================================================================
+
+JSON written to: results/baseline/N2/N2_object_analysis.json
+
+[4/6] INTERACTION ANALYSIS
+
+
+========================================================================================
+INTERACTION ANALYZER V5 COMPLETE
+========================================================================================
+
+Interaction episodes      : 78
+Pairs with episodes       : 54
+Critical event candidates : 3
+
+Critical event candidates:
+
+CriticalEvent_1  Car_2 <-> Car_18
+  Classes       : car <-> car
+  Event window  : 5.40 - 5.80 s
+  Trigger time  : 5.50 s
+  Trigger type  : closing_motion
+  Trigger score : 0.3920
+  Response      : 0.6818
+  Asymmetry     : 0.5770
+  Chain score   : 0.5899
+
+CriticalEvent_2  Car_18 <-> Car_19
+  Classes       : car <-> car
+  Event window  : 5.40 - 5.60 s
+  Trigger time  : 5.50 s
+  Trigger type  : closing_motion
+  Trigger score : 0.3989
+  Response      : 0.6818
+  Asymmetry     : 0.6464
+  Chain score   : 0.5740
+
+CriticalEvent_3  Car_15 <-> Car_18
+  Classes       : car <-> car
+  Event window  : 5.40 - 5.80 s
+  Trigger time  : 5.50 s
+  Trigger type  : closing_motion
+  Trigger score : 0.3847
+  Response      : 0.6818
+  Asymmetry     : 0.6192
+  Chain score   : 0.5728
+
+========================================================================================
+
+Saved V5 interaction analysis to: results/baseline/N2/N2_interaction_analysis.json
+
+[5/6] TEMPORAL ANALYSIS
+
+[temporal] Loading object analysis: results/baseline/N2/N2_object_analysis.json
+[temporal] Entities discovered: 19
+[temporal] Entity states: 742
+[temporal] Temporal windows: 14
+
+====================================================================================================
+TEMPORAL ABNORMALITY ANALYZER BASELINE COMPLETE
+====================================================================================================
+
+Temporal windows analyzed : 14
+Top candidate windows     : 5
+
+----------------------------------------------------------------------------------------------------
+RANK 01 | 2.10s -> 4.10s | SCORE 0.8781
+  motion change        : 0.5304
+  proximity change     : 1.0000
+  track disruption     : 0.5885
+  geometry change      : 1.0000
+  local motion chaos   : 0.8914
+  motion event density : 0.6180
+  evidence:
+    motion      -> ['Car_15', 'Car_16', 'Car_9']
+    proximity   -> ['Car_2|Car_12', 'Car_3|Car_10', 'Car_9|Car_14']
+    disruption  -> ['Car_8', 'Car_6', 'Car_12']
+    geometry    -> ['Car_10', 'Car_16', 'Car_9']
+    chaos       -> ['Car_9', 'Car_6', 'Car_15', 'Car_10', 'Car_17']
+    events      -> ['Car_13', 'Car_16', 'Car_15']
+----------------------------------------------------------------------------------------------------
+RANK 02 | 1.60s -> 3.60s | SCORE 0.8412
+  motion change        : 0.3172
+  proximity change     : 0.8706
+  track disruption     : 0.8341
+  geometry change      : 0.8790
+  local motion chaos   : 0.7307
+  motion event density : 0.3013
+  evidence:
+    motion      -> ['Car_9', 'Car_15', 'Car_7']
+    proximity   -> ['Car_2|Car_12', 'Car_13|Car_14', 'Car_3|Car_10']
+    disruption  -> ['Car_11', 'Car_8', 'Car_6']
+    geometry    -> ['Car_10', 'Car_9', 'Car_6']
+    chaos       -> ['Car_6', 'Car_15', 'Car_9', 'Car_14', 'Car_12']
+    events      -> ['Car_13', 'Car_1', 'Car_9']
+----------------------------------------------------------------------------------------------------
+RANK 03 | 2.60s -> 4.60s | SCORE 0.8318
+  motion change        : 0.7936
+  proximity change     : 1.0000
+  track disruption     : 0.4983
+  geometry change      : 1.0000
+  local motion chaos   : 0.8670
+  motion event density : 0.7308
+  evidence:
+    motion      -> ['Car_4', 'Car_15', 'Car_16']
+    proximity   -> ['Car_2|Car_12', 'Car_3|Car_10', 'Car_9|Car_14']
+    disruption  -> ['Car_6', 'Car_12', 'Car_13']
+    geometry    -> ['Car_10', 'Car_16', 'Car_9']
+    chaos       -> ['Car_15', 'Car_9', 'Car_6', 'Car_17', 'Car_10']
+    events      -> ['Car_9', 'Car_13', 'Car_15']
+----------------------------------------------------------------------------------------------------
+RANK 04 | 3.10s -> 5.10s | SCORE 0.7871
+  motion change        : 0.8149
+  proximity change     : 0.7076
+  track disruption     : 0.7555
+  geometry change      : 0.8314
+  local motion chaos   : 1.0000
+  motion event density : 0.9516
+  evidence:
+    motion      -> ['Car_4', 'Car_15', 'Car_16']
+    proximity   -> ['Car_2|Car_12', 'Car_9|Car_14', 'Car_13|Car_17']
+    disruption  -> ['Car_6', 'Car_12', 'Car_13']
+    geometry    -> ['Car_16', 'Car_9', 'Car_14']
+    chaos       -> ['Car_18', 'Car_15', 'Car_9', 'Car_19', 'Car_17']
+    events      -> ['Car_16', 'Car_9', 'Car_7']
+----------------------------------------------------------------------------------------------------
+RANK 05 | 1.10s -> 3.10s | SCORE 0.7426
+  motion change        : 0.2538
+  proximity change     : 0.7114
+  track disruption     : 0.6720
+  geometry change      : 0.3330
+  local motion chaos   : 0.5719
+  motion event density : 0.2909
+  evidence:
+    motion      -> ['Car_3', 'Car_7', 'Car_9']
+    proximity   -> ['Car_6|Car_12', 'Car_13|Car_14', 'Car_12|Car_13']
+    disruption  -> ['Car_5', 'Car_8', 'Car_6']
+    geometry    -> ['Car_6', 'Car_8', 'Car_12']
+    chaos       -> ['Car_6', 'Car_14', 'Car_15', 'Car_12', 'Car_13']
+    events      -> ['Car_1', 'Car_9', 'Car_13']
+----------------------------------------------------------------------------------------------------
+
+[temporal] Saved analysis to: results/baseline/N2/N2_temporal_analysis.json
+
+[6/6] EVENT VERIFICATION
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[verify] Loading temporal analysis...
+[verify] Selected 3 temporally diverse candidates.
+[verify] Loading HuggingFaceTB/SmolVLM2-256M-Video-Instruct on cuda...
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 6411.98it/s]
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+
+[verify] Candidate 1
+  detected window : 2.10 - 4.10 s
+  visual window   : 1.60 - 4.60 s
+  input tokens     : 3857
+  visual frames    : 6
+  frame sizes      : [(384, 108), (384, 108), (384, 108), (384, 108), (384, 108), (384, 108)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 2
+  detected window : 3.10 - 5.10 s
+  visual window   : 2.60 - 5.60 s
+  input tokens     : 3857
+  visual frames    : 6
+  frame sizes      : [(384, 108), (384, 108), (384, 108), (384, 108), (384, 108), (384, 108)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 3
+  detected window : 1.10 - 3.10 s
+  visual window   : 0.60 - 3.60 s
+  input tokens     : 3857
+  visual frames    : 6
+  frame sizes      : [(384, 108), (384, 108), (384, 108), (384, 108), (384, 108), (384, 108)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+========================================================================================
+EVENT VERIFIER COMPLETE
+========================================================================================
+Candidates verified : 3
+Critical event       : False
+Event type           : none
+Confidence           : 0.0000
+Saved to             : results/baseline/N2/N2_event_verification.json
+
+============================================================
+COMPLETED : N2
+============================================================
+
+============================================================
+BASELINE CASE : A1
+VIDEO         : videos/A1/A1_MULTIVIEW.mp4
+OUTPUT        : results/baseline/A1
+============================================================
+
+[1/6] OBJECT TRACKING
+
+[tracking] Loading yolo11n.pt...
+[tracking] Video: 1920x360, 8.00 FPS, 93 frames
+[tracking] Minimum raw track frames: 8
+[tracking] Maximum stitch gap: 1.50s (12 frames)
+[tracking] Processed 25/93 frames
+[tracking] Processed 50/93 frames
+[tracking] Processed 75/93 frames
+[tracking] Consolidating raw tracks...
+[tracking] Stitching fragmented tracks...
+[tracking] Building stitch candidates...
+[tracking] Valid raw tracks: 5
+[tracking] Stitch chains: 5
+[tracking] Stitched entities: 5
+[tracking] Accepted stitches: 0
+[tracking] Validating physical entities...
+[tracking] Accepted entities: 4
+[tracking] Rejected weak entities: 1
+
+========================================================================
+TRACKING COMPLETE
+========================================================================
+
+Physical object counts:
+  cars            4
+  buses           0
+  motorcycles     0
+  bicycles        0
+  trucks          0
+  people          0
+
+Tracking summary:
+  Raw tracker IDs: 10
+  Valid raw tracks: 5
+  Raw tracks rejected: 5
+  Stitched candidates: 5
+  Accepted stitches: 0
+  Physical entities: 4
+  Weak entities rejected: 1
+  Giant boxes rejected: 0
+  Dashcam detections rejected: 0
+
+JSON written to: results/baseline/A1/A1_tracking.json
+Annotated video written to: results/baseline/A1/A1_tracked.mp4
+========================================================================
+
+[2/6] VISUAL IDENTITY
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[identity] Loading CLIP...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 33014.26it/s]
+[identity] CLIP device: cuda
+
+[identity] Analyzing Car_1...
+  Color   : white (track confidence=1.000)
+  Subtype : car (track confidence=0.395)
+
+[identity] Analyzing Car_2...
+  Color   : black (track confidence=1.000)
+  Subtype : hatchback (track confidence=0.569)
+
+[identity] Analyzing Car_3...
+  Color   : white (track confidence=1.000)
+  Subtype : hatchback (track confidence=1.000)
+
+[identity] Analyzing Car_4...
+  Color   : white (track confidence=1.000)
+  Subtype : hatchback (track confidence=0.661)
+
+========================================================================
+VISUAL IDENTITIES
+========================================================================
+Car_1                -> White_Car
+Car_2                -> Black_Hatchback
+Car_3                -> White_Hatchback_1
+Car_4                -> White_Hatchback_2
+
+Identity JSON written to: results/baseline/A1/A1_identity.json
+
+[3/6] OBJECT ANALYSIS
+
+[analyzer] Loading tracking data...
+[analyzer] Preparing 4 physical entities...
+[analyzer] Building causal temporal states...
+
+========================================================================
+TEMPORAL OBJECT ANALYSIS COMPLETE
+========================================================================
+
+Car_1 (Car_1)
+  Class       : car
+  States      : 10
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.736
+  Stability   : 0.743
+  Max speed   : 0.069344
+  Max accel   : 0.221901
+
+Car_2 (Car_2)
+  Class       : car
+  States      : 29
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.823
+  Stability   : 0.685
+  Max speed   : 0.139591
+  Max accel   : 0.401516
+
+Car_3 (Car_3)
+  Class       : car
+  States      : 39
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.623
+  Stability   : 0.518
+  Max speed   : 0.074549
+  Max accel   : 0.343556
+
+Car_4 (Car_4)
+  Class       : car
+  States      : 19
+  Motion      : approaching_left
+  Depth       : approaching
+  Confidence  : 0.562
+  Stability   : 0.374
+  Max speed   : 0.167181
+  Max accel   : 0.534979
+
+------------------------------------------------------------------------
+Entities analyzed       : 4
+Temporal states created : 97
+Accident classification : DISABLED
+BBox overlap = collision : FALSE
+========================================================================
+
+JSON written to: results/baseline/A1/A1_object_analysis.json
+
+[4/6] INTERACTION ANALYSIS
+
+
+========================================================================================
+INTERACTION ANALYZER V5 COMPLETE
+========================================================================================
+
+Interaction episodes      : 0
+Pairs with episodes       : 0
+Critical event candidates : 0
+
+No trigger-response critical event chain was confirmed.
+
+========================================================================================
+
+Saved V5 interaction analysis to: results/baseline/A1/A1_interaction_analysis.json
+
+[5/6] TEMPORAL ANALYSIS
+
+[temporal] Loading object analysis: results/baseline/A1/A1_object_analysis.json
+[temporal] Entities discovered: 4
+[temporal] Entity states: 97
+[temporal] Temporal windows: 18
+
+====================================================================================================
+TEMPORAL ABNORMALITY ANALYZER BASELINE COMPLETE
+====================================================================================================
+
+Temporal windows analyzed : 18
+Top candidate windows     : 5
+
+----------------------------------------------------------------------------------------------------
+RANK 01 | 8.28s -> 10.28s | SCORE 0.8358
+  motion change        : 0.5646
+  proximity change     : 0.9486
+  track disruption     : 0.0000
+  geometry change      : 0.1263
+  local motion chaos   : 0.9928
+  motion event density : 0.9931
+  evidence:
+    motion      -> ['Car_3', 'Car_4']
+    proximity   -> ['Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4']
+    geometry    -> ['Car_3', 'Car_4']
+    chaos       -> ['Car_4', 'Car_3']
+    events      -> ['Car_3']
+----------------------------------------------------------------------------------------------------
+RANK 02 | 10.28s -> 12.28s | SCORE 0.8096
+  motion change        : 1.0000
+  proximity change     : 0.6043
+  track disruption     : 0.9189
+  geometry change      : 0.0419
+  local motion chaos   : 0.6452
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_3', 'Car_4']
+    proximity   -> ['Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4']
+    geometry    -> ['Car_3', 'Car_4']
+    chaos       -> ['Car_4', 'Car_3']
+    events      -> ['Car_4']
+----------------------------------------------------------------------------------------------------
+RANK 03 | 8.78s -> 10.78s | SCORE 0.8014
+  motion change        : 0.6793
+  proximity change     : 1.0000
+  track disruption     : 0.0737
+  geometry change      : 0.0544
+  local motion chaos   : 1.0000
+  motion event density : 0.7650
+  evidence:
+    motion      -> ['Car_3', 'Car_4']
+    proximity   -> ['Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4']
+    geometry    -> ['Car_3', 'Car_4']
+    chaos       -> ['Car_4', 'Car_3']
+    events      -> ['Car_3', 'Car_4']
+----------------------------------------------------------------------------------------------------
+RANK 04 | 7.78s -> 9.78s | SCORE 0.7682
+  motion change        : 0.9655
+  proximity change     : 0.0000
+  track disruption     : 0.1622
+  geometry change      : 0.5005
+  local motion chaos   : 0.0000
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_3']
+    proximity   -> []
+    disruption  -> ['Car_3']
+    geometry    -> ['Car_3']
+    chaos       -> []
+    events      -> ['Car_3']
+----------------------------------------------------------------------------------------------------
+RANK 05 | 6.28s -> 8.28s | SCORE 0.7238
+  motion change        : 0.4323
+  proximity change     : 0.1892
+  track disruption     : 0.4324
+  geometry change      : 1.0000
+  local motion chaos   : 0.4213
+  motion event density : 0.2520
+  evidence:
+    motion      -> ['Car_3', 'Car_2']
+    proximity   -> ['Car_2|Car_3']
+    disruption  -> ['Car_2', 'Car_3']
+    geometry    -> ['Car_3', 'Car_2']
+    chaos       -> ['Car_3', 'Car_2']
+    events      -> ['Car_2', 'Car_3']
+----------------------------------------------------------------------------------------------------
+
+[temporal] Saved analysis to: results/baseline/A1/A1_temporal_analysis.json
+
+[6/6] EVENT VERIFICATION
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[verify] Loading temporal analysis...
+[verify] Selected 3 temporally diverse candidates.
+[verify] Loading HuggingFaceTB/SmolVLM2-256M-Video-Instruct on cuda...
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 5914.30it/s]
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+
+[verify] Candidate 1
+  detected window : 8.28 - 10.28 s
+  visual window   : 7.78 - 10.78 s
+  input tokens     : 2267
+  visual frames    : 6
+  frame sizes      : [(384, 72), (384, 72), (384, 72), (384, 72), (384, 72), (384, 72)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 2
+  detected window : 10.28 - 12.28 s
+  visual window   : 9.78 - 11.62 s
+  input tokens     : 2267
+  visual frames    : 6
+  frame sizes      : [(384, 72), (384, 72), (384, 72), (384, 72), (384, 72), (384, 72)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 3
+  detected window : 6.28 - 8.28 s
+  visual window   : 5.78 - 8.78 s
+  input tokens     : 2267
+  visual frames    : 6
+  frame sizes      : [(384, 72), (384, 72), (384, 72), (384, 72), (384, 72), (384, 72)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+========================================================================================
+EVENT VERIFIER COMPLETE
+========================================================================================
+Candidates verified : 3
+Critical event       : False
+Event type           : none
+Confidence           : 0.0000
+Saved to             : results/baseline/A1/A1_event_verification.json
+
+============================================================
+COMPLETED : A1
+============================================================
+
+============================================================
+BASELINE CASE : A2
+VIDEO         : videos/A2/A2_MULTIVIEW.mp4
+OUTPUT        : results/baseline/A2
+============================================================
+
+[1/6] OBJECT TRACKING
+
+[tracking] Loading yolo11n.pt...
+[tracking] Video: 1920x360, 8.00 FPS, 56 frames
+[tracking] Minimum raw track frames: 8
+[tracking] Maximum stitch gap: 1.50s (12 frames)
+[tracking] Processed 25/56 frames
+[tracking] Processed 50/56 frames
+[tracking] Consolidating raw tracks...
+[tracking] Stitching fragmented tracks...
+[tracking] Building stitch candidates...
+[tracking] Valid raw tracks: 5
+[tracking] Stitch chains: 5
+[tracking] Stitched entities: 5
+[tracking] Accepted stitches: 0
+[tracking] Validating physical entities...
+[tracking] Accepted entities: 5
+[tracking] Rejected weak entities: 0
+
+========================================================================
+TRACKING COMPLETE
+========================================================================
+
+Physical object counts:
+  cars            5
+  buses           0
+  motorcycles     0
+  bicycles        0
+  trucks          0
+  people          0
+
+Tracking summary:
+  Raw tracker IDs: 11
+  Valid raw tracks: 5
+  Raw tracks rejected: 6
+  Stitched candidates: 5
+  Accepted stitches: 0
+  Physical entities: 5
+  Weak entities rejected: 0
+  Giant boxes rejected: 0
+  Dashcam detections rejected: 0
+
+JSON written to: results/baseline/A2/A2_tracking.json
+Annotated video written to: results/baseline/A2/A2_tracked.mp4
+========================================================================
+
+[2/6] VISUAL IDENTITY
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[identity] Loading CLIP...
+Loading weights:   0%|          | 0/398 [00:00<?, ?it/s]Loading weights: 100%|██████████| 398/398 [00:00<00:00, 25711.71it/s]
+[identity] CLIP device: cuda
+
+[identity] Analyzing Car_1...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_2...
+  Color   : unknown (track confidence=0.000)
+  Subtype : car (track confidence=0.000)
+
+[identity] Analyzing Car_3...
+  Color   : gray (track confidence=1.000)
+  Subtype : hatchback (track confidence=0.945)
+
+[identity] Analyzing Car_4...
+  Color   : black (track confidence=0.526)
+  Subtype : SUV (track confidence=0.688)
+
+[identity] Analyzing Car_5...
+  Color   : white (track confidence=0.880)
+  Subtype : hatchback (track confidence=0.867)
+
+========================================================================
+VISUAL IDENTITIES
+========================================================================
+Car_1                -> Car_1
+Car_2                -> Car_2
+Car_3                -> Gray_Hatchback
+Car_4                -> Black_Suv
+Car_5                -> White_Hatchback
+
+Identity JSON written to: results/baseline/A2/A2_identity.json
+
+[3/6] OBJECT ANALYSIS
+
+[analyzer] Loading tracking data...
+[analyzer] Preparing 5 physical entities...
+[analyzer] Building causal temporal states...
+
+========================================================================
+TEMPORAL OBJECT ANALYSIS COMPLETE
+========================================================================
+
+Car_1 (Car_1)
+  Class       : car
+  States      : 6
+  Motion      : receding
+  Depth       : receding
+  Confidence  : 0.703
+  Stability   : 0.872
+  Max speed   : 0.023635
+  Max accel   : 0.000000
+
+Car_2 (Car_2)
+  Class       : car
+  States      : 15
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.851
+  Stability   : 0.906
+  Max speed   : 0.024032
+  Max accel   : 0.057387
+
+Car_3 (Car_3)
+  Class       : car
+  States      : 17
+  Motion      : receding_right
+  Depth       : receding
+  Confidence  : 0.728
+  Stability   : 0.551
+  Max speed   : 0.144875
+  Max accel   : 0.456965
+
+Car_4 (Car_4)
+  Class       : car
+  States      : 14
+  Motion      : approaching
+  Depth       : approaching
+  Confidence  : 0.483
+  Stability   : 0.211
+  Max speed   : 0.276813
+  Max accel   : 0.831163
+
+Car_5 (Car_5)
+  Class       : car
+  States      : 12
+  Motion      : receding_left
+  Depth       : receding
+  Confidence  : 0.793
+  Stability   : 0.765
+  Max speed   : 0.100986
+  Max accel   : 0.309951
+
+------------------------------------------------------------------------
+Entities analyzed       : 5
+Temporal states created : 64
+Accident classification : DISABLED
+BBox overlap = collision : FALSE
+========================================================================
+
+JSON written to: results/baseline/A2/A2_object_analysis.json
+
+[4/6] INTERACTION ANALYSIS
+
+
+========================================================================================
+INTERACTION ANALYZER V5 COMPLETE
+========================================================================================
+
+Interaction episodes      : 2
+Pairs with episodes       : 2
+Critical event candidates : 0
+
+No trigger-response critical event chain was confirmed.
+
+========================================================================================
+
+Saved V5 interaction analysis to: results/baseline/A2/A2_interaction_analysis.json
+
+[5/6] TEMPORAL ANALYSIS
+
+[temporal] Loading object analysis: results/baseline/A2/A2_object_analysis.json
+[temporal] Entities discovered: 5
+[temporal] Entity states: 64
+[temporal] Temporal windows: 13
+
+====================================================================================================
+TEMPORAL ABNORMALITY ANALYZER BASELINE COMPLETE
+====================================================================================================
+
+Temporal windows analyzed : 13
+Top candidate windows     : 5
+
+----------------------------------------------------------------------------------------------------
+RANK 01 | 4.28s -> 6.28s | SCORE 0.8750
+  motion change        : 0.8128
+  proximity change     : 0.8874
+  track disruption     : 0.0000
+  geometry change      : 0.5510
+  local motion chaos   : 0.9299
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_4', 'Car_3', 'Car_5']
+    proximity   -> ['Car_3|Car_5', 'Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4', 'Car_5']
+    geometry    -> ['Car_4', 'Car_3', 'Car_5']
+    chaos       -> ['Car_4', 'Car_3', 'Car_5']
+    events      -> ['Car_3']
+----------------------------------------------------------------------------------------------------
+RANK 02 | 4.78s -> 6.78s | SCORE 0.8400
+  motion change        : 0.8592
+  proximity change     : 1.0000
+  track disruption     : 0.0538
+  geometry change      : 0.9555
+  local motion chaos   : 0.9542
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_4', 'Car_3', 'Car_5']
+    proximity   -> ['Car_3|Car_5', 'Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4', 'Car_5']
+    geometry    -> ['Car_4', 'Car_3', 'Car_5']
+    chaos       -> ['Car_4', 'Car_3', 'Car_5']
+    events      -> ['Car_3', 'Car_4']
+----------------------------------------------------------------------------------------------------
+RANK 03 | 5.28s -> 7.28s | SCORE 0.7568
+  motion change        : 0.9428
+  proximity change     : 1.0000
+  track disruption     : 0.4301
+  geometry change      : 1.0000
+  local motion chaos   : 1.0000
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_4', 'Car_3', 'Car_5']
+    proximity   -> ['Car_3|Car_5', 'Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4', 'Car_5']
+    geometry    -> ['Car_4', 'Car_5', 'Car_3']
+    chaos       -> ['Car_4', 'Car_3', 'Car_5']
+    events      -> ['Car_3', 'Car_4']
+----------------------------------------------------------------------------------------------------
+RANK 04 | 5.78s -> 7.78s | SCORE 0.7377
+  motion change        : 1.0000
+  proximity change     : 0.9752
+  track disruption     : 0.6989
+  geometry change      : 0.7917
+  local motion chaos   : 1.0000
+  motion event density : 1.0000
+  evidence:
+    motion      -> ['Car_4', 'Car_3', 'Car_5']
+    proximity   -> ['Car_3|Car_5', 'Car_3|Car_4']
+    disruption  -> ['Car_3', 'Car_4', 'Car_5']
+    geometry    -> ['Car_4', 'Car_5', 'Car_3']
+    chaos       -> ['Car_4', 'Car_3', 'Car_5']
+    events      -> ['Car_3', 'Car_4']
+----------------------------------------------------------------------------------------------------
+RANK 05 | 2.77s -> 4.78s | SCORE 0.6604
+  motion change        : 0.0000
+  proximity change     : 0.0000
+  track disruption     : 1.0000
+  geometry change      : 0.0610
+  local motion chaos   : 0.0000
+  motion event density : 0.0000
+  evidence:
+    motion      -> ['Car_2']
+    proximity   -> []
+    disruption  -> ['Car_2']
+    geometry    -> ['Car_2']
+    chaos       -> []
+    events      -> []
+----------------------------------------------------------------------------------------------------
+
+[temporal] Saved analysis to: results/baseline/A2/A2_temporal_analysis.json
+
+[6/6] EVENT VERIFICATION
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] Model config: pad_token_id must be `None` or an integer within the vocabulary (between 0 and 31999), got 128002. This may result in unexpected behavior.
+[verify] Loading temporal analysis...
+[verify] Selected 3 temporally diverse candidates.
+[verify] Loading HuggingFaceTB/SmolVLM2-256M-Video-Instruct on cuda...
+Loading weights:   0%|          | 0/471 [00:00<?, ?it/s]Loading weights: 100%|██████████| 471/471 [00:00<00:00, 6450.18it/s]
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+
+[verify] Candidate 1
+  detected window : 4.28 - 6.28 s
+  visual window   : 3.78 - 6.78 s
+  input tokens     : 2267
+  visual frames    : 6
+  frame sizes      : [(384, 72), (384, 72), (384, 72), (384, 72), (384, 72), (384, 72)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 2
+  detected window : 5.28 - 7.28 s
+  visual window   : 4.78 - 7.00 s
+  input tokens     : 2267
+  visual frames    : 6
+  frame sizes      : [(384, 72), (384, 72), (384, 72), (384, 72), (384, 72), (384, 72)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+[verify] Candidate 3
+  detected window : 2.77 - 4.78 s
+  visual window   : 2.27 - 5.28 s
+  input tokens     : 2267
+  visual frames    : 6
+  frame sizes      : [(384, 72), (384, 72), (384, 72), (384, 72), (384, 72), (384, 72)]
+  raw VLM response : 'CRITICAL'
+  decision parse   : FAILED
+  parse reason     : VLM response did not contain a DECISION field.
+  critical event  : False
+  event type      : none
+  confidence      : 0.0000
+
+========================================================================================
+EVENT VERIFIER COMPLETE
+========================================================================================
+Candidates verified : 3
+Critical event       : False
+Event type           : none
+Confidence           : 0.0000
+Saved to             : results/baseline/A2/A2_event_verification.json
+
+============================================================
+COMPLETED : A2
+============================================================
+
+============================================================
+FOUR-CASE BASELINE COMPLETE
+============================================================

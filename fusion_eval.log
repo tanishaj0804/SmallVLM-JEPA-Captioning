@@ -1,0 +1,178 @@
+
+============================================================
+N1 MULTIVIEW FUSION
+============================================================
+[fusion] INFRA    proposals: 7
+[fusion] DRONE    proposals: 12
+
+========================================================================================
+MULTIVIEW EVENT FUSION V1 COMPLETE
+========================================================================================
+Case                : N1
+Views               : INFRA, DRONE
+Proposals analyzed  : 19
+Temporal clusters   : 3
+Critical candidates : 2
+Ambiguous events    : 1
+Top decision        : CRITICAL_CANDIDATE
+Top score           : 0.8333
+Top window          : {'start_time': 3.6, 'end_time': 6.6}
+Saved to            : results/baseline/N1/N1_multiview_fusion.json
+========================================================================================
+
+RANK 01 | 3.60-6.60s | CRITICAL_CANDIDATE | score=0.8333
+  views       : ['DRONE', 'INFRA']
+  temporal    : 1.0000
+  interaction : 0.5000
+  response    : 0.5000
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views', 'strong temporal abnormality supported by multiple views', 'at least one view contains pairwise interaction support', 'at least one view contains post-trigger response support']
+
+RANK 02 | 0.20-3.60s | CRITICAL_CANDIDATE | score=0.6940
+  views       : ['DRONE', 'INFRA']
+  temporal    : 1.0000
+  interaction : 1.0000
+  response    : 1.0000
+  ambiguity   : 0.5500
+  reasons     : ['temporally aligned abnormality across multiple views', 'at least one view contains pairwise interaction support', 'at least one view contains post-trigger response support', 'critical interaction evidence is isolated to one projection']
+
+RANK 03 | 2.10-4.60s | AMBIGUOUS | score=0.4872
+  views       : ['DRONE', 'INFRA']
+  temporal    : 1.0000
+  interaction : 0.0000
+  response    : 0.0000
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views']
+
+============================================================
+N2 MULTIVIEW FUSION
+============================================================
+[fusion] INFRA    proposals: 5
+[fusion] DRONE    proposals: 33
+
+========================================================================================
+MULTIVIEW EVENT FUSION V1 COMPLETE
+========================================================================================
+Case                : N2
+Views               : INFRA, DRONE
+Proposals analyzed  : 38
+Temporal clusters   : 3
+Critical candidates : 1
+Ambiguous events    : 2
+Top decision        : CRITICAL_CANDIDATE
+Top score           : 0.8143
+Top window          : {'start_time': 0.7, 'end_time': 6.6}
+Saved to            : results/baseline/N2/N2_multiview_fusion.json
+========================================================================================
+
+RANK 01 | 0.70-6.60s | CRITICAL_CANDIDATE | score=0.8143
+  views       : ['DRONE', 'INFRA']
+  temporal    : 1.0000
+  interaction : 0.5000
+  response    : 0.5000
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views', 'at least one view contains pairwise interaction support', 'at least one view contains post-trigger response support']
+
+RANK 02 | 4.10-6.70s | AMBIGUOUS | score=0.5998
+  views       : ['DRONE', 'INFRA']
+  temporal    : 1.0000
+  interaction : 0.0000
+  response    : 0.5000
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views', 'at least one view contains post-trigger response support']
+
+RANK 03 | 0.10-4.60s | AMBIGUOUS | score=0.5625
+  views       : ['DRONE', 'INFRA']
+  temporal    : 1.0000
+  interaction : 0.5000
+  response    : 0.5000
+  ambiguity   : 0.7750
+  reasons     : ['temporally aligned abnormality across multiple views', 'at least one view contains pairwise interaction support', 'at least one view contains post-trigger response support', 'critical interaction evidence is isolated to one projection']
+
+============================================================
+A1 MULTIVIEW FUSION
+============================================================
+[fusion] INFRA    proposals: 17
+[fusion] EGO      proposals: 5
+[fusion] OTHER    proposals: 16
+
+========================================================================================
+MULTIVIEW EVENT FUSION V1 COMPLETE
+========================================================================================
+Case                : A1
+Views               : INFRA, EGO, OTHER
+Proposals analyzed  : 38
+Temporal clusters   : 4
+Critical candidates : 1
+Ambiguous events    : 3
+Top decision        : CRITICAL_CANDIDATE
+Top score           : 0.7760
+Top window          : {'start_time': 3.9, 'end_time': 7.4}
+Saved to            : results/baseline/A1/A1_multiview_fusion.json
+========================================================================================
+
+RANK 01 | 3.90-7.40s | CRITICAL_CANDIDATE | score=0.7760
+  views       : ['EGO', 'INFRA', 'OTHER']
+  temporal    : 1.0000
+  interaction : 0.0000
+  response    : 0.3333
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views', 'strong temporal abnormality supported by multiple views', 'at least one view contains post-trigger response support']
+
+RANK 02 | 4.00-9.90s | AMBIGUOUS | score=0.6693
+  views       : ['EGO', 'INFRA', 'OTHER']
+  temporal    : 1.0000
+  interaction : 0.3333
+  response    : 0.6667
+  ambiguity   : 0.7833
+  reasons     : ['temporally aligned abnormality across multiple views', 'strong temporal abnormality supported by multiple views', 'at least one view contains pairwise interaction support', 'at least one view contains post-trigger response support', 'critical interaction evidence is isolated to one projection']
+
+RANK 03 | 8.40-11.90s | AMBIGUOUS | score=0.5679
+  views       : ['EGO', 'INFRA', 'OTHER']
+  temporal    : 0.6667
+  interaction : 0.0000
+  response    : 0.6667
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views', 'at least one view contains post-trigger response support']
+
+RANK 04 | 1.80-4.90s | AMBIGUOUS | score=0.4909
+  views       : ['INFRA', 'OTHER']
+  temporal    : 0.3333
+  interaction : 0.0000
+  response    : 0.6667
+  ambiguity   : 0.0000
+  reasons     : ['at least one view contains post-trigger response support']
+
+============================================================
+A2 MULTIVIEW FUSION
+============================================================
+[fusion] INFRA    proposals: 8
+[fusion] EGO      proposals: 1
+[fusion] OTHER    proposals: 1
+
+========================================================================================
+MULTIVIEW EVENT FUSION V1 COMPLETE
+========================================================================================
+Case                : A2
+Views               : INFRA, EGO, OTHER
+Proposals analyzed  : 10
+Temporal clusters   : 1
+Critical candidates : 1
+Ambiguous events    : 0
+Top decision        : CRITICAL_CANDIDATE
+Top score           : 0.7583
+Top window          : {'start_time': 2.9, 'end_time': 7.4}
+Saved to            : results/baseline/A2/A2_multiview_fusion.json
+========================================================================================
+
+RANK 01 | 2.90-7.40s | CRITICAL_CANDIDATE | score=0.7583
+  views       : ['EGO', 'INFRA', 'OTHER']
+  temporal    : 1.0000
+  interaction : 0.3333
+  response    : 0.0000
+  ambiguity   : 0.0000
+  reasons     : ['temporally aligned abnormality across multiple views', 'at least one view contains pairwise interaction support']
+
+============================================================
+FOUR-CASE FUSION EVALUATION COMPLETE
+============================================================

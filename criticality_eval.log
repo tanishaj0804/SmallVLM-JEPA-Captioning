@@ -1,0 +1,485 @@
+
+============================================================
+CASE : N1
+============================================================
+
+[1/2] MULTIVIEW EVENT FUSION V3
+
+[fusion-v6] INFRA    interaction anchors=6   temporal windows=4
+[fusion-v6] DRONE    interaction anchors=32  temporal windows=5
+
+================================================================================================
+MULTIVIEW EVENT FUSION V6 COMPLETE
+================================================================================================
+Case             : N1
+Views            : INFRA, DRONE
+Localized events : 4
+Saved to         : results/baseline/N1/N1_multiview_fusion.json
+================================================================================================
+FusedEvent_1   | anchor=1.29s | window=0.54-2.54s | temp=0.50 | inter=1.00 | coh=0.000 | cons_views=['INFRA'] | cons_types=['motion_change', 'track_disruption'] | cons_div=0.558 | direct=['INFRA'] | indirect=[] | complement=False | kin_only=False | views=['DRONE', 'INFRA']
+FusedEvent_2   | anchor=2.66s | window=1.91-3.91s | temp=1.00 | inter=0.50 | coh=0.777 | cons_views=['DRONE', 'INFRA'] | cons_types=['motion_change', 'track_disruption'] | cons_div=0.883 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=False | views=['DRONE', 'INFRA']
+FusedEvent_3   | anchor=4.32s | window=3.57-5.57s | temp=1.00 | inter=0.50 | coh=0.595 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change', 'motion_change', 'track_disruption'] | cons_div=1.000 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=False | views=['DRONE', 'INFRA']
+FusedEvent_4   | anchor=6.08s | window=5.33-7.33s | temp=1.00 | inter=1.00 | coh=0.850 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change', 'motion_change'] | cons_div=0.883 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=True | views=['DRONE', 'INFRA']
+
+[2/2] CRITICALITY ANALYSIS
+
+
+================================================================================================
+CRITICALITY ANALYZER V5 COMPLETE
+================================================================================================
+Case                         : N1
+Events analyzed              : 4
+Critical candidates          : 0
+Visual confirmation required : 0
+Ambiguous                    : 0
+Non-critical                 : 4
+Top decision                 : NON_CRITICAL
+Top window                   : {'start_time': 0.5437, 'end_time': 2.5438}
+Saved to                     : results/baseline/N1/N1_criticality_analysis.json
+================================================================================================
+
+RANK 01 | FusedEvent_1 | 0.54-2.54s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.0000
+  consviews: ['INFRA']
+  constypes: ['motion_change', 'track_disruption']
+  consdiv  : 0.5583
+  sceneonly: []
+  direct   : ['INFRA']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+RANK 02 | FusedEvent_2 | 1.91-3.91s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.7769
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['motion_change', 'track_disruption']
+  consdiv  : 0.8833
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['cross-view temporal abnormality lacks sufficiently diverse multiview consequence evidence']
+
+RANK 03 | FusedEvent_4 | 5.33-7.33s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.8500
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change', 'motion_change']
+  consdiv  : 0.8833
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : True
+  chain    : []
+  reasons  : ['replicated motion/geometry change lacks continuity disruption and remains projection-vulnerable']
+
+RANK 04 | FusedEvent_3 | 3.57-5.57s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.5946
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change', 'motion_change', 'track_disruption']
+  consdiv  : 1.0000
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['cross-view temporal abnormality lacks sufficiently diverse multiview consequence evidence']
+
+============================================================
+COMPLETED : N1
+============================================================
+
+============================================================
+CASE : N2
+============================================================
+
+[1/2] MULTIVIEW EVENT FUSION V3
+
+[fusion-v6] INFRA    interaction anchors=1   temporal windows=5
+[fusion-v6] DRONE    interaction anchors=48  temporal windows=5
+
+================================================================================================
+MULTIVIEW EVENT FUSION V6 COMPLETE
+================================================================================================
+Case             : N2
+Views            : INFRA, DRONE
+Localized events : 5
+Saved to         : results/baseline/N2/N2_multiview_fusion.json
+================================================================================================
+FusedEvent_1   | anchor=1.24s | window=0.49-2.49s | temp=1.00 | inter=0.50 | coh=0.822 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change'] | cons_div=0.767 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=True | views=['DRONE', 'INFRA']
+FusedEvent_2   | anchor=3.02s | window=2.27-4.27s | temp=1.00 | inter=1.00 | coh=0.952 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change', 'motion_change'] | cons_div=0.883 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=True | views=['DRONE', 'INFRA']
+FusedEvent_3   | anchor=4.15s | window=3.40-5.40s | temp=1.00 | inter=0.50 | coh=0.952 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change', 'motion_change'] | cons_div=0.883 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=True | views=['DRONE', 'INFRA']
+FusedEvent_4   | anchor=5.20s | window=4.45-6.45s | temp=1.00 | inter=0.50 | coh=0.791 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change', 'track_disruption'] | cons_div=0.883 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=False | views=['DRONE', 'INFRA']
+FusedEvent_5   | anchor=6.33s | window=5.58-7.58s | temp=1.00 | inter=0.50 | coh=0.739 | cons_views=['DRONE', 'INFRA'] | cons_types=['geometry_change', 'track_disruption'] | cons_div=0.883 | direct=['DRONE', 'INFRA'] | indirect=[] | complement=False | kin_only=False | views=['DRONE', 'INFRA']
+
+[2/2] CRITICALITY ANALYSIS
+
+
+================================================================================================
+CRITICALITY ANALYZER V5 COMPLETE
+================================================================================================
+Case                         : N2
+Events analyzed              : 5
+Critical candidates          : 0
+Visual confirmation required : 0
+Ambiguous                    : 0
+Non-critical                 : 5
+Top decision                 : NON_CRITICAL
+Top window                   : {'start_time': 3.4, 'end_time': 5.4}
+Saved to                     : results/baseline/N2/N2_criticality_analysis.json
+================================================================================================
+
+RANK 01 | FusedEvent_3 | 3.40-5.40s
+  decision : NON_CRITICAL
+  level    : 1
+  route    : PROJECTION_AMBIGUITY_SUPPRESSION
+  compound : False
+  strong   : False
+  coherence: 0.9521
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change', 'motion_change']
+  consdiv  : 0.8833
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : True
+  chain    : []
+  reasons  : ['critical interaction evidence is isolated to one camera projection']
+
+RANK 02 | FusedEvent_2 | 2.27-4.27s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.9521
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change', 'motion_change']
+  consdiv  : 0.8833
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : True
+  chain    : []
+  reasons  : ['replicated motion/geometry change lacks continuity disruption and remains projection-vulnerable']
+
+RANK 03 | FusedEvent_4 | 4.45-6.45s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.7908
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change', 'track_disruption']
+  consdiv  : 0.8833
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+RANK 04 | FusedEvent_5 | 5.58-7.58s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.7394
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change', 'track_disruption']
+  consdiv  : 0.8833
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+RANK 05 | FusedEvent_1 | 0.49-2.49s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.8224
+  consviews: ['DRONE', 'INFRA']
+  constypes: ['geometry_change']
+  consdiv  : 0.7667
+  sceneonly: []
+  direct   : ['DRONE', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : True
+  chain    : []
+  reasons  : ['replicated motion/geometry change lacks continuity disruption and remains projection-vulnerable']
+
+============================================================
+COMPLETED : N2
+============================================================
+
+============================================================
+CASE : A1
+============================================================
+
+[1/2] MULTIVIEW EVENT FUSION V3
+
+[fusion-v6] INFRA    interaction anchors=11  temporal windows=5
+[fusion-v6] EGO      interaction anchors=0   temporal windows=5
+[fusion-v6] OTHER    interaction anchors=3   temporal windows=5
+
+================================================================================================
+MULTIVIEW EVENT FUSION V6 COMPLETE
+================================================================================================
+Case             : A1
+Views            : INFRA, EGO, OTHER
+Localized events : 6
+Saved to         : results/baseline/A1/A1_multiview_fusion.json
+================================================================================================
+FusedEvent_1   | anchor=3.40s | window=2.65-4.65s | temp=0.33 | inter=0.00 | coh=0.000 | cons_views=['OTHER'] | cons_types=['geometry_change', 'motion_change'] | cons_div=0.450 | direct=['OTHER'] | indirect=[] | complement=False | kin_only=False | views=['OTHER']
+FusedEvent_2   | anchor=4.90s | window=4.15-6.15s | temp=1.00 | inter=0.33 | coh=0.903 | cons_views=['EGO', 'INFRA', 'OTHER'] | cons_types=['geometry_change', 'motion_change', 'track_disruption'] | cons_div=1.000 | direct=['EGO', 'INFRA', 'OTHER'] | indirect=[] | complement=False | kin_only=False | views=['EGO', 'INFRA', 'OTHER']
+FusedEvent_3   | anchor=6.50s | window=5.75-7.75s | temp=0.67 | inter=0.33 | coh=0.879 | cons_views=['EGO', 'INFRA'] | cons_types=['geometry_change', 'track_disruption'] | cons_div=0.667 | direct=['EGO', 'INFRA'] | indirect=[] | complement=False | kin_only=False | views=['EGO', 'INFRA']
+FusedEvent_4   | anchor=8.29s | window=7.54-9.54s | temp=1.00 | inter=0.67 | coh=0.947 | cons_views=['EGO', 'INFRA', 'OTHER'] | cons_types=['geometry_change', 'motion_change', 'track_disruption'] | cons_div=1.000 | direct=['EGO', 'INFRA', 'OTHER'] | indirect=[] | complement=False | kin_only=False | views=['EGO', 'INFRA', 'OTHER']
+FusedEvent_5   | anchor=9.33s | window=8.58-10.58s | temp=0.67 | inter=0.67 | coh=0.966 | cons_views=['INFRA', 'OTHER'] | cons_types=['geometry_change', 'motion_change', 'track_disruption'] | cons_div=0.783 | direct=['INFRA', 'OTHER'] | indirect=[] | complement=False | kin_only=False | views=['INFRA', 'OTHER']
+FusedEvent_6   | anchor=10.90s | window=10.15-12.15s | temp=0.33 | inter=0.00 | coh=0.000 | cons_views=['EGO'] | cons_types=['motion_change', 'track_disruption'] | cons_div=0.450 | direct=['EGO'] | indirect=[] | complement=False | kin_only=False | views=['EGO']
+
+[2/2] CRITICALITY ANALYSIS
+
+
+================================================================================================
+CRITICALITY ANALYZER V5 COMPLETE
+================================================================================================
+Case                         : A1
+Events analyzed              : 6
+Critical candidates          : 0
+Visual confirmation required : 2
+Ambiguous                    : 0
+Non-critical                 : 4
+Top decision                 : VISUAL_CONFIRMATION_REQUIRED
+Top window                   : {'start_time': 7.5357, 'end_time': 9.5357}
+Saved to                     : results/baseline/A1/A1_criticality_analysis.json
+================================================================================================
+
+RANK 01 | FusedEvent_4 | 7.54-9.54s
+  decision : VISUAL_CONFIRMATION_REQUIRED
+  level    : 2
+  route    : CROSS_VIEW_CONSEQUENCE_DIVERSITY
+  compound : False
+  strong   : False
+  coherence: 0.9465
+  consviews: ['EGO', 'INFRA', 'OTHER']
+  constypes: ['geometry_change', 'motion_change', 'track_disruption']
+  consdiv  : 1.0000
+  sceneonly: []
+  direct   : ['EGO', 'INFRA', 'OTHER']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['multiple views localize strong abnormality near the same event anchor', 'entity-consequence signals are present in multiple camera views', 'different consequence signal types provide heterogeneous multiview support', 'track disruption is present as supporting continuity evidence']
+
+RANK 02 | FusedEvent_2 | 4.15-6.15s
+  decision : VISUAL_CONFIRMATION_REQUIRED
+  level    : 2
+  route    : CROSS_VIEW_CONSEQUENCE_DIVERSITY
+  compound : False
+  strong   : False
+  coherence: 0.9028
+  consviews: ['EGO', 'INFRA', 'OTHER']
+  constypes: ['geometry_change', 'motion_change', 'track_disruption']
+  consdiv  : 1.0000
+  sceneonly: []
+  direct   : ['EGO', 'INFRA', 'OTHER']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['multiple views localize strong abnormality near the same event anchor', 'entity-consequence signals are present in multiple camera views', 'different consequence signal types provide heterogeneous multiview support', 'track disruption is present as supporting continuity evidence']
+
+RANK 03 | FusedEvent_5 | 8.58-10.58s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.9663
+  consviews: ['INFRA', 'OTHER']
+  constypes: ['geometry_change', 'motion_change', 'track_disruption']
+  consdiv  : 0.7833
+  sceneonly: []
+  direct   : ['INFRA', 'OTHER']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+RANK 04 | FusedEvent_1 | 2.65-4.65s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.0000
+  consviews: ['OTHER']
+  constypes: ['geometry_change', 'motion_change']
+  consdiv  : 0.4500
+  sceneonly: []
+  direct   : ['OTHER']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+RANK 05 | FusedEvent_3 | 5.75-7.75s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.8794
+  consviews: ['EGO', 'INFRA']
+  constypes: ['geometry_change', 'track_disruption']
+  consdiv  : 0.6667
+  sceneonly: []
+  direct   : ['EGO', 'INFRA']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+RANK 06 | FusedEvent_6 | 10.15-12.15s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.0000
+  consviews: ['EGO']
+  constypes: ['motion_change', 'track_disruption']
+  consdiv  : 0.4500
+  sceneonly: []
+  direct   : ['EGO']
+  indirect : []
+  complement: False
+  kin_only : False
+  chain    : []
+  reasons  : ['no compound consequence or multiview consequence-diversity route was satisfied']
+
+============================================================
+COMPLETED : A1
+============================================================
+
+============================================================
+CASE : A2
+============================================================
+
+[1/2] MULTIVIEW EVENT FUSION V3
+
+[fusion-v6] INFRA    interaction anchors=4   temporal windows=5
+[fusion-v6] EGO      interaction anchors=0   temporal windows=1
+[fusion-v6] OTHER    interaction anchors=0   temporal windows=1
+
+================================================================================================
+MULTIVIEW EVENT FUSION V6 COMPLETE
+================================================================================================
+Case             : A2
+Views            : INFRA, EGO, OTHER
+Localized events : 2
+Saved to         : results/baseline/A2/A2_multiview_fusion.json
+================================================================================================
+FusedEvent_1   | anchor=4.15s | window=3.40-5.40s | temp=0.67 | inter=0.00 | coh=0.592 | cons_views=['INFRA'] | cons_types=['motion_change'] | cons_div=0.333 | direct=['INFRA'] | indirect=['EGO'] | complement=True | kin_only=False | views=['EGO', 'INFRA']
+FusedEvent_2   | anchor=6.17s | window=5.42-7.42s | temp=1.00 | inter=0.33 | coh=0.509 | cons_views=['INFRA'] | cons_types=['geometry_change', 'motion_change'] | cons_div=0.450 | direct=['INFRA'] | indirect=['EGO', 'OTHER'] | complement=True | kin_only=False | views=['EGO', 'INFRA', 'OTHER']
+
+[2/2] CRITICALITY ANALYSIS
+
+
+================================================================================================
+CRITICALITY ANALYZER V5 COMPLETE
+================================================================================================
+Case                         : A2
+Events analyzed              : 2
+Critical candidates          : 0
+Visual confirmation required : 1
+Ambiguous                    : 0
+Non-critical                 : 1
+Top decision                 : VISUAL_CONFIRMATION_REQUIRED
+Top window                   : {'start_time': 5.425, 'end_time': 7.425}
+Saved to                     : results/baseline/A2/A2_criticality_analysis.json
+================================================================================================
+
+RANK 01 | FusedEvent_2 | 5.42-7.42s
+  decision : VISUAL_CONFIRMATION_REQUIRED
+  level    : 2
+  route    : COMPLEMENTARY_CROSS_VIEW_RESPONSE
+  compound : False
+  strong   : False
+  coherence: 0.5093
+  consviews: ['INFRA']
+  constypes: ['geometry_change', 'motion_change']
+  consdiv  : 0.4500
+  sceneonly: ['EGO', 'OTHER']
+  direct   : ['INFRA']
+  indirect : ['EGO', 'OTHER']
+  complement: True
+  kin_only : False
+  chain    : []
+  reasons  : ['multiple views localize abnormality near the same event anchor', 'at least one view contains direct entity-consequence evidence', 'other synchronized views contain indirect scene-response evidence', 'complementary camera roles require visual physical-consequence verification']
+
+RANK 02 | FusedEvent_1 | 3.40-5.40s
+  decision : NON_CRITICAL
+  level    : 0
+  route    : GENERIC_OR_INSUFFICIENT_EVIDENCE
+  compound : False
+  strong   : False
+  coherence: 0.5917
+  consviews: ['INFRA']
+  constypes: ['motion_change']
+  consdiv  : 0.3333
+  sceneonly: ['EGO']
+  direct   : ['INFRA']
+  indirect : ['EGO']
+  complement: True
+  kin_only : False
+  chain    : []
+  reasons  : ['synchronized abnormality is dominated by scene-level activity and did not satisfy the complementary-response temporal route']
+
+============================================================
+COMPLETED : A2
+============================================================
+
+============================================================
+FOUR-CASE CRITICALITY EVALUATION COMPLETE
+============================================================
